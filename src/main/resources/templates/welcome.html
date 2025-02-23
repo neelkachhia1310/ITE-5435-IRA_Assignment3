@@ -1,0 +1,14 @@
+<body>
+    <h1>Welcome, <span th:text="${student.userName}"></span>!</h1>
+    <p>You have successfully logged in.</p>
+
+    <h2>Your Profile</h2>
+    <p><strong>Name:</strong> <span th:text="${student.firstName} + ' ' + ${student.lastName}"></span></p>
+    <p><strong>Address:</strong> <span th:text="${student.address}"></span></p>
+    <p><strong>City:</strong> <span th:text="${student.city}"></span></p>
+    <p><strong>Postal Code:</strong> <span th:text="${student.postalCode}"></span></p>
+   
+    <a href="/students/update">Edit Profile</a>
+    <br>
+
+</body>

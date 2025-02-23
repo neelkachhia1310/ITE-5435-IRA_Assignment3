@@ -1,0 +1,21 @@
+<body>
+    <h1>Student Login</h1>
+    <div>
+        <p th:text="${message}"></p> <!-- Show error message -->
+    </div>
+    <form action="/students/login" method="post">
+        <div>
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" name="userName" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <br>
+    <a href="/students/register">Don't have an account? Register here</a>
+</body>

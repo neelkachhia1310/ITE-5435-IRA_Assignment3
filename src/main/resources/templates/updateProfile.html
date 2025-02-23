@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Update Your Profile</h1>
+    <form action="/students/update" method="post">
+        <input type="hidden" name="studentId" th:value="${student.studentId}">
+
+        <div>
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" name="userName" th:value="${student.userName}" readonly>
+        </div>
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" th:value="${student.firstName}" required>
+        </div>
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" th:value="${student.lastName}" required>
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" th:value="${student.address}" required>
+        </div>
+        <div>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" th:value="${student.city}" required>
+        </div>
+        <div>
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" id="postalCode" name="postalCode" th:value="${student.postalCode}" required>
+        </div>
+        
+        <div>
+            <button type="submit">Update Profile</button>
+        </div>
+    </form>
+    <br>
+    <a href="/students/welcome">Back to Welcome Page</a>
+</body>
+</html>
